@@ -1,2 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
-# Javascript30
+You can find every files to start the course @ https://github.com/wesbos/JavaScript30
+
+Click on a link from the homepage to see the result of an exercice.
+
+Template by @LeWagon
