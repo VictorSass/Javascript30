@@ -7,7 +7,7 @@ Draft.destroy_all
 
 puts "Creating new entries"
 
-d1 = Draft.create!(name: "JavaScript Drum Kit", completion: '<div class="keys">
+d1 = Draft.create!(name: "JavaScript Drum Kit", completion: '<html><div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
@@ -72,7 +72,7 @@ d1 = Draft.create!(name: "JavaScript Drum Kit", completion: '<div class="keys">
   const keys = Array.from(document.querySelectorAll(".key"));
   keys.forEach(key => key.addEventListener("transitionend", removeTransition));
   window.addEventListener("keydown", playSound);
-</script>
+</script></hmtl>
 ')
 
 d2 = Draft.create!(name: "JS and CSS Clock", completion: '<div class="clock">
