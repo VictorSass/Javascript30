@@ -16,9 +16,7 @@
       <% @drafts.each do |draft| %>
         <ul>
           <li>
-            <%= link_to "drafts/show" do %>
-              <%= draft.name %>
-            <% end %>
+            <%= link_to draft.name, draft_path(draft) %>
           </li>
         </ul>
       <% end %>
