@@ -7,22 +7,29 @@
       </div>
 
       <div class="main-intro">
-      <p>Welcome to my take on Wes Bos' exerices of Javascript30 courses.</p>
-
-      <p>Click on the link below to see the results of my work.</p>
+        <p>Welcome to my take on Wes Bos' exerices of Javascript30 courses.</p>
+        <p>Click on one of the links below to see the results of my work.</p>
       </div>
     </div>
 
-      <div class="draft-list">
+
+    <div class="draft-list">
+      <div class="row">
         <% @drafts.each do |draft| %>
-          <ul>
-            <li>
-              <%= link_to draft.name, draft_path(draft), :class => "draft-link" %>
-            </li>
-          </ul>
+          <div class="col-xs-6">
+            <ul>
+              <li>
+                <%= link_to draft.name, draft_path(draft), :class => "draft-link" %>
+              </li>
+            </ul>
+          </div>
         <% end %>
       </div>
-
-    <a href="mailto:sassonia.victor@gmail.com"> <b>Contact</b></a>
+    </div>
+    <div class="contact text-center ">
+      <a href="mailto:sassonia.victor@gmail.com"><b>Contact me</b></a>
+    </div>
   </div>
+
 </div>
+

@@ -8,6 +8,11 @@ p {
   color: rgb(160,160,160);
 }
 
+ul li {
+  color: rgb(100,100,100);
+  list-style-type: disc;
+}
+
 .main-title > h1 {
   font-weight: bold;
   letter-spacing: 1px;
@@ -28,3 +33,10 @@ p {
 .draft-link:hover {
   color: #6B0D0D;
 }
+
+.contact > a {
+  color: black;
+  font-size: 29px;
+  font-weight: light;
+}
+
