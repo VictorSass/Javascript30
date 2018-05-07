@@ -7,7 +7,7 @@ Draft.destroy_all
 
 puts "Creating new entries"
 
-d1 = Draft.create!(name: "JavaScript Drum Kit", completion: '<html><div class="keys">
+d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completion: '<div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
@@ -72,10 +72,9 @@ d1 = Draft.create!(name: "JavaScript Drum Kit", completion: '<html><div class="k
   const keys = Array.from(document.querySelectorAll(".key"));
   keys.forEach(key => key.addEventListener("transitionend", removeTransition));
   window.addEventListener("keydown", playSound);
-</script></hmtl>
-')
+</script>')
 
-d2 = Draft.create!(name: "JS and CSS Clock", completion: '<div class="clock">
+d2 = Draft.create!(name: "02 - JS and CSS Clock", completion: '<div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
         <div class="hand min-hand"></div>
@@ -153,34 +152,34 @@ d2 = Draft.create!(name: "JS and CSS Clock", completion: '<div class="clock">
   setDate();
 </script>')
 
-d3 = Draft.create!(name: "CSS Variables")
-d4 = Draft.create!(name: "Array Cardio Day 1")
-d5 = Draft.create!(name: "Flex Panel Gallery")
-d6 = Draft.create!(name: "Type Ahead")
-d7 = Draft.create!(name: "Array Cardio Day 2")
-d8 = Draft.create!(name: "Fun with HTML5 Canvas")
-d9 = Draft.create!(name: "Dev Tools Domination")
-d10 = Draft.create!(name: "Hold Shift and Check Checkboxes")
-d11 = Draft.create!(name: "Custom Video Player")
-d12 = Draft.create!(name: "Key Sequence Detection")
-d13 = Draft.create!(name: "Slide in on Scroll")
-d14 = Draft.create!(name: "JJavaScript References VS Copying")
-d15 = Draft.create!(name: "LocalStorage")
-d16 = Draft.create!(name: "Mouse Move Shadow")
-d17 = Draft.create!(name: "Sort Without Articles")
-d18 = Draft.create!(name: "Adding Up Times with Reduce")
-d19 = Draft.create!(name: "Webcam Fun")
-d20 = Draft.create!(name: "Speech Detection")
-d21 = Draft.create!(name: "Geolocation")
-d22 = Draft.create!(name: "Follow Along Link Highlighter")
-d23 = Draft.create!(name: "Speech Synthesis")
-d24 = Draft.create!(name: "Sticky Nav")
-d25 = Draft.create!(name: "Event Capture, Propagation, Bubbling and Once")
-d26 = Draft.create!(name: "Stripe Follow Along Nav")
-d27 = Draft.create!(name: "Click and Drag")
-d28 = Draft.create!(name: "Video Speed Controller")
-d29 = Draft.create!(name: "Countdown Timer")
-d30 = Draft.create!(name: "Whack A Mole")
+d3 = Draft.create!(name: "03 - CSS Variables")
+d4 = Draft.create!(name: "04 - Array Cardio Day 1")
+d5 = Draft.create!(name: "05 - Flex Panel Gallery")
+d6 = Draft.create!(name: "06 - Type Ahead")
+d7 = Draft.create!(name: "07 - Array Cardio Day 2")
+d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas")
+d9 = Draft.create!(name: "09 - Dev Tools Domination")
+d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes")
+d11 = Draft.create!(name: "11 - Custom Video Player")
+d12 = Draft.create!(name: "12 - Key Sequence Detection")
+d13 = Draft.create!(name: "13 - Slide in on Scroll")
+d14 = Draft.create!(name: "14 - JJavaScript References VS Copying")
+d15 = Draft.create!(name: "15 - LocalStorage")
+d16 = Draft.create!(name: "16 - Mouse Move Shadow")
+d17 = Draft.create!(name: "17 - Sort Without Articles")
+d18 = Draft.create!(name: "18 - Adding Up Times with Reduce")
+d19 = Draft.create!(name: "19 - Webcam Fun")
+d20 = Draft.create!(name: "20 - Speech Detection")
+d21 = Draft.create!(name: "21 - Geolocation")
+d22 = Draft.create!(name: "22 - Follow Along Link Highlighter")
+d23 = Draft.create!(name: "23 - Speech Synthesis")
+d24 = Draft.create!(name: "24 - Sticky Nav")
+d25 = Draft.create!(name: "25 - Event Capture, Propagation, Bubbling and Once")
+d26 = Draft.create!(name: "26 - Stripe Follow Along Nav")
+d27 = Draft.create!(name: "27 - Click and Drag")
+d28 = Draft.create!(name: "28 - Video Speed Controller")
+d29 = Draft.create!(name: "29 - Countdown Timer")
+d30 = Draft.create!(name: "30 - Whack A Mole")
 
 
 puts "End seed"
