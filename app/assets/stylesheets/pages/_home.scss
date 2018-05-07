@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+
+.wrapper {
+  background-color: rgb(240,240,240);
+}
+
+p {
+  color: rgb(160,160,160);
+}
+
+.main-title > h1 {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(150,150,150);
+}
+
+.main-title > h2 {
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  color: rgb(175,175,175);
+}
+
+.draft-link {
+  text-decoration: none;
+  color: #F7230C;
+}
+
+.draft-link:hover {
+  color: #6B0D0D;
+}

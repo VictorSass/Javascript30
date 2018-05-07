@@ -1,27 +1,28 @@
-<div class="container">
-  <div class="résumé">
-    <div class="main-title">
-      <h1>Javascript30</h1>
-      <h2>30 day vanilla JS coding challenge</h2>
+<div class="wrapper">
+  <div class="container">
+    <div class="résumé">
+      <div class="main-title text-center">
+        <h1>Javascript30</h1>
+        <h2>30 day vanilla JS coding challenge</h2>
+      </div>
+
+      <div class="main-intro">
+      <p>Welcome to my take on Wes Bos' exerices of Javascript30 courses.</p>
+
+      <p>Click on the link below to see the results of my work.</p>
+      </div>
     </div>
 
-    <div class="main-intro">
-    <p>Welcome to my take on Wes Bos' exerices of Javascript30 courses.</p>
+      <div class="draft-list">
+        <% @drafts.each do |draft| %>
+          <ul>
+            <li>
+              <%= link_to draft.name, draft_path(draft), :class => "draft-link" %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
 
-    <p>Click on the link below to see the results of my work.</p>
-    </div>
+    <a href="mailto:sassonia.victor@gmail.com"> <b>Contact</b></a>
   </div>
-
-    <div class="draft-list">
-      <% @drafts.each do |draft| %>
-        <ul>
-          <li>
-            <%= link_to draft.name, draft_path(draft) %>
-          </li>
-        </ul>
-      <% end %>
-    </div>
-
-  <a href="mailto:sassonia.victor@gmail.com"> <b>Contact</b></a>
 </div>
-
