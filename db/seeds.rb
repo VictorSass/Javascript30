@@ -82,7 +82,6 @@ d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", completion: 
       </div>
     </div>
 
-
   <style>
     .clock {
       width: 30rem;
@@ -102,7 +101,7 @@ d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", completion: 
       position: relative;
       width: 100%;
       height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
+      transform: translateY(-3px);
     }
     .hand {
       width:50%;
