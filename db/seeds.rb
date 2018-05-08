@@ -84,21 +84,6 @@ d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", completion: 
 
 
   <style>
-    html {
-      background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
-      background-size:cover;
-      font-family:"helvetica neue";
-      text-align: center;
-      font-size: 10px;
-    }
-    body {
-      margin: 0;
-      font-size: 2rem;
-      display:flex;
-      flex:1;
-      min-height: 100vh;
-      align-items: center;
-    }
     .clock {
       width: 30rem;
       height: 30rem;
