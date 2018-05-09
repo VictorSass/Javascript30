@@ -74,7 +74,8 @@ d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "No", completion
   window.addEventListener("keydown", playSound);
 </script>')
 
-d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", completion: '<div class="clock">
+d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", intro: "The goal of this exercise is to create a dynamic
+ clock that takes the current time from Javascript and update itself every second", completion: '<div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
         <div class="hand min-hand"></div>
