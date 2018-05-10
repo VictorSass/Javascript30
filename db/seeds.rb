@@ -7,72 +7,82 @@ Draft.destroy_all
 
 puts "Creating new entries"
 
-d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "No", completion: '<div class="keys">
+d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "In this exercise, we're gonna make a Javacript drumkit that play a
+  sound when you hit the corresponding key but also do a subtle CSS animation", completion: '<body>
+
+
+  <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
       <span class="sound">Clap</span>
     </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
+    <div data-key="90" class="key">
+      <kbd>Z</kbd>
       <span class="sound">Hihat</span>
     </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
+    <div data-key="69" class="key">
+      <kbd>E</kbd>
       <span class="sound">Kick</span>
     </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
+    <div data-key="82" class="key">
+      <kbd>R</kbd>
       <span class="sound">Openhat</span>
     </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
+    <div data-key="84" class="key">
+      <kbd>T</kbd>
       <span class="sound">Boom</span>
     </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
+    <div data-key="89" class="key">
+      <kbd>Y</kbd>
       <span class="sound">Ride</span>
     </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
+    <div data-key="85" class="key">
+      <kbd>U</kbd>
       <span class="sound">Snare</span>
     </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
+    <div data-key="73" class="key">
+      <kbd>I</kbd>
       <span class="sound">Tom</span>
     </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
+    <div data-key="79" class="key">
+      <kbd>O</kbd>
       <span class="sound">Tink</span>
-    </div>
   </div>
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="65" src="clap.wav"></audio>
+  <audio data-key="90" src="sounds/hihat.wav"></audio>
+  <audio data-key="69" src="sounds/kick.wav"></audio>
+  <audio data-key="82" src="sounds/openhat.wav"></audio>
+  <audio data-key="84" src="sounds/boom.wav"></audio>
+  <audio data-key="89" src="sounds/ride.wav"></audio>
+  <audio data-key="85" src="sounds/snare.wav"></audio>
+  <audio data-key="73" src="sounds/tom.wav"></audio>
+  <audio data-key="79" src="sounds/tink.wav"></audio>
 
 <script>
-  function removeTransition(e) {
-    if (e.propertyName !== "transform") return;
-    e.target.classList.remove("playing");
-  }
+
   function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    if (!audio) return;
-    key.classList.add("playing");
+    audio.crossOrigin = "anonymous";
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if(!audio) return;
     audio.currentTime = 0;
     audio.play();
+    console.log(key);
+    key.classList.add("playing");
   }
-  const keys = Array.from(document.querySelectorAll(".key"));
+
+  function removeTransition(e) {
+    if(e.propertyName !== "transform") return;
+    this.classList.remove("playing");
+  }
+
+  const keys = document.querySelectorAll(".key");
   keys.forEach(key => key.addEventListener("transitionend", removeTransition));
   window.addEventListener("keydown", playSound);
-</script>')
+
+</script>
+')
 
 d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", intro: "The goal of this exercise is to create a dynamic
  clock that takes the current time from Javascript and update itself every second", completion: '<div class="clock">
