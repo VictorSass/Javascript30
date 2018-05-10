@@ -8,7 +8,7 @@ Draft.destroy_all
 puts "Creating new entries"
 
 d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "In this exercise, we're gonna make a Javacript drumkit that play a
-  sound when you hit the corresponding key but also do a subtle CSS animation", completion: '<body>
+  sound when you hit the corresponding key but also do a subtle CSS animation /!\ Currently fixing sound not working", completion: '<body>
 
 
   <div class="keys">
