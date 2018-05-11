@@ -147,7 +147,65 @@ d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", intro: "The 
   setDate();
 </script>')
 
-d3 = Draft.create!(name: "03 - CSS Variables", completed: "No")
+d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's exercise will be about CSS variables, move any cursor to update the CSS in real time", completion: '<body>
+  <p><i>Update CSS Variables with <span class="hl">JS</span></i></p>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+
+    <label for="base">Base Color</label>
+    <input id="base" type="color" name="base" value="#ffc600">
+  </div>
+
+  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+
+  <style>
+    :root {
+      --base: red;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
+
+    /*
+      misc styles, nothing to do with CSS variables
+    */
+
+    .controls {
+      margin-bottom: 50px;
+    }
+    input {
+      width:100px;
+    }
+  </style>
+
+  <script>
+    const inputs = document.querySelectorAll(".controls input");
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || "";
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener("change", handleUpdate))
+    inputs.forEach(input => input.addEventListener("mousemove", handleUpdate))
+
+  </script>
+
+</body>')
 d4 = Draft.create!(name: "04 - Array Cardio Day 1", completed: "No")
 d5 = Draft.create!(name: "05 - Flex Panel Gallery", completed: "No")
 d6 = Draft.create!(name: "06 - Type Ahead", completed: "No")
