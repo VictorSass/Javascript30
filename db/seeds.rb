@@ -8,7 +8,7 @@ Draft.destroy_all
 puts "Creating new entries"
 
 d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "In this exercise, we're gonna make a Javacript drumkit that play a
-  sound when you hit the corresponding key but also do a subtle CSS animation /!\ Currently fixing sound not working", completion: '<body>
+  sound when you hit the corresponding key but also do a subtle CSS animation. CURRENTLY TRYING TO FIX SOUND ISSUE !", completion: '<body>
 
 
   <div class="keys">
@@ -85,7 +85,7 @@ d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "I
 ')
 
 d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", intro: "The goal of this exercise is to create a dynamic
- clock that takes the current time from Javascript and update itself every second", completion: '<div class="clock">
+ clock that takes the current time from Javascript and update itself every second.", completion: '<div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
         <div class="hand min-hand"></div>
@@ -147,7 +147,7 @@ d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", intro: "The 
   setDate();
 </script>')
 
-d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's exercise will be about CSS variables, move any cursor to update the CSS in real time", completion: '<body>
+d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's exercise will be about CSS variables, move any cursor to update the CSS in real time.", completion: '<body>
   <p><i>Update CSS Variables with <span class="hl">JS</span></i></p>
 
   <div class="controls">
@@ -207,7 +207,7 @@ d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's 
 
 </body>')
 
-d4 = Draft.create!(name: "04 - Array Cardio Day 1", completed: "Yes", intro: "Today is all about array methods",  completion: '<body>
+d4 = Draft.create!(name: "04 - Array Cardio Day 1", completed: "Yes", intro: "Today is all about array methods.",  completion: '<body>
   <p><em>To understand today`s exercise have a look at the JavaScript Console 💁 and the page sourcecode !</em> </p>
   <script>
     // Get your shorts on - this is an array workout!
