@@ -293,11 +293,24 @@ d4 = Draft.create!(name: "04 - Array Cardio Day 1", completed: "Yes", intro: "To
   </script>
 </body>')
 
-d5 = Draft.create!(name: "05 - Flex Panel Gallery", completed: "Yes", intro: "Here is a flex gallery out of flexbox/CSS and a little bit of Javascript", completion: '<head>
+d5 = Draft.create!(name: "05 - Flex Panel Gallery", completed: "Yes", intro: "Here is a flex gallery out of flexbox/CSS and a little bit of Javascript. Click on one of the words below to see the result.", completion: '<head>
   <meta charset="UTF-8">
   <title>Flex Panels 💪</title>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type="text/css">
 </head><style>
+html {
+      box-sizing: border-box;
+      background:#ffc600;
+      font-family:"helvetica neue";
+      font-size: 20px;
+      font-weight: 200;
+    }
+    body {
+      margin: 0;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
     .panels {
       min-height:100vh;
       overflow: hidden;
@@ -358,34 +371,37 @@ d5 = Draft.create!(name: "05 - Flex Panel Gallery", completed: "Yes", intro: "He
       font-size:40px;
       flex: 5;
     }
+    .white {
+      color: white;
+    }
   </style>
 
 
   <div class="panels">
     <div class="panel panel1">
-      <p>Hey</p>
-      <p>Let`s</p>
-      <p>Dance</p>
+      <p class="white">Hey</p>
+      <p class="white">Let`s</p>
+      <p class="white">Dance</p>
     </div>
     <div class="panel panel2">
-      <p>Give</p>
-      <p>Take</p>
-      <p>Receive</p>
+      <p class="white">Give</p>
+      <p class="white">Take</p>
+      <p class="white">Receive</p>
     </div>
     <div class="panel panel3">
-      <p>Experience</p>
-      <p>It</p>
-      <p>Today</p>
+      <p class="white">Experience</p>
+      <p class="white">It</p>
+      <p class="white">Today</p>
     </div>
     <div class="panel panel4">
-      <p>Give</p>
-      <p>All</p>
-      <p>You can</p>
+      <p class="white">Give</p>
+      <p class="white">All</p>
+      <p class="white">You can</p>
     </div>
     <div class="panel panel5">
-      <p>Life</p>
-      <p>In</p>
-      <p>Motion</p>
+      <p class="white">Life</p>
+      <p class="white">In</p>
+      <p class="white">Motion</p>
     </div>
   </div>
 
