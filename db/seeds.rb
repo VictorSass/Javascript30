@@ -300,7 +300,6 @@ d5 = Draft.create!(name: "05 - Flex Panel Gallery", completed: "Yes", intro: "He
 </head><style>
 html {
       box-sizing: border-box;
-      background:#ffc600;
       font-family:"helvetica neue";
       font-size: 20px;
       font-weight: 200;
