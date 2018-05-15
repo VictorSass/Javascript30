@@ -1,10 +1,6 @@
-
-
 puts "Launching test seed"
-
 puts "Destroying previous entries"
 Draft.destroy_all
-
 puts "Creating new entries"
 
 d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "In this exercise, we're gonna make a Javacript drumkit that play a
@@ -49,8 +45,8 @@ d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "I
       <span class="sound">Tink</span>
   </div>
 
-  <audio data-key="65" src="clap.wav"></audio>
-  <audio data-key="90" src="sounds/hihat.wav"></audio>
+  <audio data-key="65" src="/assets/sounds/clap.wav"></audio>
+  <audio data-key="90" src="assets/sounds/hihat.wav"></audio>
   <audio data-key="69" src="sounds/kick.wav"></audio>
   <audio data-key="82" src="sounds/openhat.wav"></audio>
   <audio data-key="84" src="sounds/boom.wav"></audio>
@@ -227,6 +223,7 @@ d4 = Draft.create!(name: "04 - Array Cardio Day 1", completed: "Yes", intro: "To
       { first: "Lise", last: "Meitner", year: 1878, passed: 1968 },
       { first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 }
     ];
+
     const people = ["Beck, Glenn", "Becker, Carl", "Beckett, Samuel", "Beddoes, Mick", "Beecher, Henry", "Beethoven, Ludwig", "Begin, Menachem", "Belloc, Hilaire", "Bellow, Saul", "Benchley, Robert", "Benenson, Peter", "Ben-Gurion, David", "Benjamin, Walter", "Benn, Tony", "Bennington, Chester", "Benson, Leana", "Bent, Silas", "Bentsen, Lloyd", "Berger, Ric", "Bergman, Ingmar", "Berio, Luciano", "Berle, Milton", "Berlin, Irving", "Berne, Eric", "Bernhard, Sandra", "Berra, Yogi", "Berry, Halle", "Berry, Wendell", "Bethea, Erin", "Bevan, Aneurin", "Bevel, Ken", "Biden, Joseph", "Bierce, Ambrose", "Biko, Steve", "Billings, Josh", "Biondo, Frank", "Birrell, Augustine", "Black, Elk", "Blair, Robert", "Blair, Tony", "Blake, William"];
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 15th century
@@ -266,7 +263,6 @@ d4 = Draft.create!(name: "04 - Array Cardio Day 1", completed: "Yes", intro: "To
       // const de = links
       //         .map(link => link.textContent)
       //         .filter(streetName => streetName.includes("de"));
-
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
@@ -336,6 +332,7 @@ html {
       display: flex;
       flex-direction: column;
     }
+
     .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
     .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
     .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
@@ -374,7 +371,6 @@ html {
       color: white;
     }
   </style>
-
 
   <div class="panels">
     <div class="panel panel1">
