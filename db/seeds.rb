@@ -406,8 +406,6 @@ html {
 
     panels.forEach(panel => panel.addEventListener("click", toggleOpen));
     panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
-
-
   </script>')
 
 d6 = Draft.create!(name: "06 - Type Ahead", completed: "Yes", intro: "Today, the goal is to create a feature that update suggestions everytime an input is made in the searchbar", completion: '<body>
@@ -445,7 +443,6 @@ d6 = Draft.create!(name: "06 - Type Ahead", completed: "Yes", intro: "Today, the
       font-size: 40px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
     }
-
 
     .suggestions {
       margin: 0;
@@ -491,6 +488,7 @@ d6 = Draft.create!(name: "06 - Type Ahead", completed: "Yes", intro: "Today, the
       <li>or a state</li>
     </ul>
   </form>
+
 <script>
 const endpoint = "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
 
@@ -530,8 +528,8 @@ const suggestions = document.querySelector(".suggestions");
 
 searchInput.addEventListener("change", displayMatches);
 searchInput.addEventListener("keyup", displayMatches);
-
 </script>
+
   </body>')
 
 d7 = Draft.create!(name: "07 - Array Cardio Day 2", completed: "No")
@@ -558,6 +556,5 @@ d27 = Draft.create!(name: "27 - Click and Drag", completed: "No")
 d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No")
 d29 = Draft.create!(name: "29 - Countdown Timer", completed: "No")
 d30 = Draft.create!(name: "30 - Whack A Mole", completed: "No")
-
 
 puts "End seed"
