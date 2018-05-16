@@ -4,13 +4,14 @@
       <div class="home-button"><%= link_to "Home", root_path, :class => "draft-link" %></div>
       <div class="draft-title"><%= @draft.name %></div>
     </div>
-      <div class="draft-resume"><b>Recap : </b><%= @draft.intro %></div>
+    <div class="draft-resume">
+      <b>Recap : </b><%= @draft.intro %>
+    </div>
 
     <% if @draft.completion.nil? %>
       <h2>Sorry, I've yet to do this exercise, come back later :)</h2>
     <% else %>
       <%=raw @draft.completion %>
     <% end %>
-
   </div>
 </div>
