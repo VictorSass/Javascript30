@@ -5,8 +5,6 @@ puts "Creating new entries"
 
 d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "In this exercise, we're gonna make a Javacript drumkit that play a
   sound when you hit the corresponding key but also do a subtle CSS animation. CURRENTLY TRYING TO FIX SOUND ISSUE !", completion: '<body>
-
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -56,7 +54,6 @@ d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "I
   <audio data-key="79" src="sounds/tink.wav"></audio>
 
 <script>
-
   function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     audio.crossOrigin = "anonymous";
@@ -76,7 +73,6 @@ d1 = Draft.create!(name: "01 - JavaScript Drum Kit", completed: "Yes", intro: "I
   const keys = document.querySelectorAll(".key");
   keys.forEach(key => key.addEventListener("transitionend", removeTransition));
   window.addEventListener("keydown", playSound);
-
 </script>
 ')
 
@@ -176,10 +172,6 @@ d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's 
       color: var(--base);
     }
 
-    /*
-      misc styles, nothing to do with CSS variables
-    */
-
     .controls {
       margin-bottom: 50px;
     }
@@ -198,7 +190,6 @@ d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's 
 
     inputs.forEach(input => input.addEventListener("change", handleUpdate))
     inputs.forEach(input => input.addEventListener("mousemove", handleUpdate))
-
   </script>
 
 </body>')
