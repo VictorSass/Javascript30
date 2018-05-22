@@ -532,7 +532,7 @@ searchInput.addEventListener("keyup", displayMatches);
 
   </body>')
 
-d7 = Draft.create!(name: "07 - Array Cardio Day 2", completed: "Yes", intro: "", completion: "<body>
+d7 = Draft.create!(name: "07 - Array Cardio Day 2", completed: "Yes", intro: "Today is all about array methods (again).", completion: "<body>
   <p><em>To understand today`s exercise have a look at the JavaScript Console 💁 and the page sourcecode !</p>
   <script>
     // ## Array Cardio Day 2
