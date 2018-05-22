@@ -636,7 +636,7 @@ d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas", completed: "Yes", intro:"
 </body>')
 
 d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "Today is avout dev tools and console tricks ! Check the Javascript Console 💁 to see the result", completion: '<body>
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+  <p onClick="makeGreen()"><i>To see a JS interaction, you can find the attributes in the console, right click > attributes modifications</i></p>
   <script>
     const dogs = [{ name: "Snickers", age: 2 }, { name: "Bounty", age: 8 }];
     function makeGreen() {
