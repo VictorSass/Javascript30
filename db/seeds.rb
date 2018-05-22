@@ -635,7 +635,7 @@ d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas", completed: "Yes", intro:"
 </style>
 </body>')
 
-d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "", completion: '<body>
+d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "Today is avout dev tools and console tricks ! Check the Javascript Console 💁 to see the result", completion: '<body>
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
   <script>
     const dogs = [{ name: "Snickers", age: 2 }, { name: "Bounty", age: 8 }];
