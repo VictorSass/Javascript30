@@ -635,7 +635,81 @@ d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas", completed: "Yes", intro:"
 </style>
 </body>')
 
-d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "No")
+d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "", completion: '<body>
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+  <script>
+    const dogs = [{ name: "Snickers", age: 2 }, { name: "Bounty", age: 8 }];
+    function makeGreen() {
+      const p = document.querySelector("p");
+      p.style.color = "#BADA55";
+      p.style.fontSize = "50px";
+    }
+
+    // Regular
+    console.log("Hello");
+
+    // Interpolated
+    console.log("Hello I am an %s string!", "interpolated");
+
+    // Styled
+    console.log("%c I am some big red text", "font-size:50px; background:red")
+
+    // warning!
+    console.warn("Warning sign");
+
+    // Error :|
+    console.error("Error sign");
+
+    // Info
+    console.info("Info sign");
+
+    // Testing
+    const p = document.querySelector("p");
+
+    console.assert(p.classList.contains("ouch"), "This word is not contained");
+
+    console.assert(1 === 2, "The assertation is wrong so this message print");
+
+    // clearing
+    console.clear();
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+    console.clear();
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+    console.count("Snickers");
+    console.count("Bounty");
+    console.count("Bounty");
+    console.count("Bounty");
+    console.count("Snickers");
+    console.count("Snickers");
+    console.count("Snickers");
+    console.count("Bounty");
+    console.count("Bounty");
+    console.count("Snickers");
+
+    // timing
+    console.time("Fetching data");
+    fetch("https://api.github.com/users/VictorSass")
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd("Fetching data");
+        console.log(data);
+      });
+  </script>
+</body>')
+
 d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "No")
 d11 = Draft.create!(name: "11 - Custom Video Player", completed: "No")
 d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "No")
