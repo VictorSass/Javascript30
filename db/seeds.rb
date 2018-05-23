@@ -810,6 +810,7 @@ d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Ye
 
   checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleCheck))
 </script>')
+
 d11 = Draft.create!(name: "11 - Custom Video Player", completed: "No")
 d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "No")
 d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "No")
