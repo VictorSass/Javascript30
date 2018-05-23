@@ -13,5 +13,9 @@
     <% else %>
       <%=raw @draft.completion %>
     <% end %>
+    <div class="previous-next">
+      <%= link_to("Previous exercise", @draft.previous) if @draft.previous %>
+      <%= link_to("Next exercise", @draft.next) if @draft.next %>
+    </div>
   </div>
 </div>

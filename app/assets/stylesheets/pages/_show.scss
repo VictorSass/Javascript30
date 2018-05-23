@@ -55,3 +55,10 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+.previous-next {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
