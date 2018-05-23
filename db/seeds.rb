@@ -710,7 +710,7 @@ d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "
   </script>
 </body>')
 
-d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Yes", intro: "", completion: '<body>
+d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Yes", intro: "Below is a form that allow you to check multiple boxes holding the shift button.", completion: '<body>
   <style>
     html {
       font-family: sans-serif;
