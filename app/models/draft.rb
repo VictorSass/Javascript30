@@ -1,5 +1,5 @@
 class Draft < ApplicationRecord
-  default_scope { order('id ASC') }
+  default_scope { order("id ASC") }
   scope :next, lambda {|id| where("id > ?", id).order("id ASC") }
   scope :previous, lambda {|id| where("id < ?", id).order("id DESC") }
 
@@ -8,6 +8,6 @@ class Draft < ApplicationRecord
   end
 
   def previous
-    Draft.previous(self.id).first
+    Draft.previous(self.id).last
   end
 end
