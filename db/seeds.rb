@@ -811,7 +811,28 @@ d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Ye
   checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleCheck))
 </script>')
 
-d11 = Draft.create!(name: "11 - Custom Video Player", completed: "No")
+d11 = Draft.create!(name: "11 - Custom Video Player", completed: "Yes", completion: '<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+  const pressed = [];
+  const secretCode = "javascript";
+  window.addEventListener("keyup", (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if(pressed.join("").includes(secretCode)) {
+      console.log("Sucess");
+      cornify_add();
+    }
+    console.log(pressed);
+    });
+</script>
+</body>
+</html>
+')
 d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "No")
 d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "No")
 d14 = Draft.create!(name: "14 - JavaScript References VS Copying", completed: "No")
