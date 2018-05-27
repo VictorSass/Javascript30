@@ -811,7 +811,24 @@ d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Ye
   checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleCheck))
 </script>')
 
-d11 = Draft.create!(name: "11 - Custom Video Player", completed: "No", completion: '')
+d11 = Draft.create!(name: "11 - Custom Video Player", completed: "Yes", intro: "We are customizing the HTML default player.", completion: '<body>
+   <div class="player">
+     <video class="player__video viewer" src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"></video>
+
+     <div class="player__controls">
+       <div class="progress">
+        <div class="progress__filled"></div>
+       </div>
+       <button class="player__button toggle" title="Toggle Play">►</button>
+       <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+       <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+       <button data-skip="-10" class="player__button">« 10s</button>
+       <button data-skip="25" class="player__button">25s »</button>
+     </div>
+   </div>
+
+  <script src="videoplayer.js"></script>
+</body>')
 
 d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "Yes", intro: "Today is about key sequencing detection, meaning an action will perform if it matches what we want. Try it by typing 'javascript' in this page !", completion: '<head>
   <meta charset="UTF-8">
