@@ -811,7 +811,9 @@ d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Ye
   checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleCheck))
 </script>')
 
-d11 = Draft.create!(name: "11 - Custom Video Player", completed: "Yes", completion: '<head>
+d11 = Draft.create!(name: "11 - Custom Video Player", completed: "No", completion: '')
+
+d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "Yes", intro: "Today is about key sequencing detection, meaning an action will perform if it matches what we want. Try it by typing 'javascript' in this page !", completion: '<head>
   <meta charset="UTF-8">
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 </head>
@@ -833,7 +835,7 @@ d11 = Draft.create!(name: "11 - Custom Video Player", completed: "Yes", completi
 </body>
 </html>
 ')
-d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "No")
+
 d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "No")
 d14 = Draft.create!(name: "14 - JavaScript References VS Copying", completed: "No")
 d15 = Draft.create!(name: "15 - LocalStorage", completed: "No")
