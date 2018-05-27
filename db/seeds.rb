@@ -826,7 +826,7 @@ d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "Yes", intro
     pressed.push(e.key);
     pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
     if(pressed.join("").includes(secretCode)) {
-      console.log("Sucess");
+      console.warn("Congratulations ! You typed the code correctly.");
       cornify_add();
     }
     console.log(pressed);
