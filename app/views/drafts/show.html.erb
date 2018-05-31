@@ -15,8 +15,14 @@
       <% end %>
     </div>
     <div class="previous-next">
-      <%= link_to("Previous exercise", @draft.previous) if @draft.previous %>
-      <%= link_to("Next exercise", @draft.next) if @draft.next %>
+      <% if @draft.previous && draft.next %>
+        <%= link_to("Previous exercise", @draft.previous) if @draft.previous %>
+        <%= link_to("Next exercise", @draft.next) if @draft.next %>
+      <% elsif @draft.previous %>
+        <%= link_to("Previous exercise", @draft.previous) if @draft.previous, :class => "flex-end" %>
+      <% else %>
+        <%= link_to("Next exercise", @draft.next) if @draft.next, :class => "flex-start"  %>
+      <% end %>
     </div>
   </div>
 </div>
