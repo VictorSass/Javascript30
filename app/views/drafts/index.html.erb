@@ -17,7 +17,7 @@
             <ul>
               <li>
                 <%= link_to draft.name, draft_path(draft), :class => "draft-link" %>
-                <% if draft.completed == "Yes"%>
+                <% if draft.completed == "Yes" %>
                   <i class="fas fa-check"></i>
                 <% end %>
               </li>
