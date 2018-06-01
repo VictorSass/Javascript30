@@ -285,7 +285,27 @@ d5 = Draft.create!(name: "05 - Flex Panel Gallery", completed: "Yes", intro: "He
     panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
   </script>')
 
-d6 = Draft.create!(name: "06 - Type Ahead", completed: "Yes", intro: "Today, the goal is to create a feature that update suggestions everytime an input is made in the searchbar", completion: '<body>
+d6 = Draft.create!(name: "06 - Type Ahead", completed: "Yes", intro: "Today, the goal is to create a feature that update suggestions everytime an input is made in the searchbar", completion: '<body><style>
+input {
+  width: 100%;
+  padding:20px;
+}
+
+input.search {
+  margin: 0;
+  text-align: center;
+  outline:0;
+  border: 10px solid #F7F7F7;
+  width: 120%;
+  left: -10%;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  border-radius: 5px;
+  font-size: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+</style>
   <form class="search-form">
     <input type="text" class="search" placeholder="City or State">
     <ul class="suggestions">
@@ -514,7 +534,7 @@ d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "
   </script>
 </body>')
 
-d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Yes", intro: "Below is a form that allow you to check multiple boxes holding the shift button.", completion: '<body><style>
+d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Yes", intro: "Below is a form that allow you to check multiple boxes holding the shift button. Hold shift while clicking on a box to select all or click on a box, hold shit then click on another box to select the ones you want.", completion: '<body><style>
     .inbox {
       max-width:400px;
       margin:50px auto;
@@ -650,11 +670,9 @@ d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "Yes", intro
     console.log(pressed);
     });
 </script>
-</body>
-</html>
-')
+</body>')
 
-d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "Yes", intro: "Today, we are adding sliding images that appears while we scroll at their level." completion: '<body>
+d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "Yes", intro: "Today, we are adding sliding images that appears while we scroll at their level.", completion: '<body>
   <div class="site-wrap">
 
     <h1>Slide in on Scroll</h1>
