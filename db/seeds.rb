@@ -104,7 +104,22 @@ d2 = Draft.create!(name: "02 - JS and CSS Clock", completed: "Yes", intro: "The 
   setDate();
 </script>')
 
-d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's exercise will be about CSS variables, move any cursor to update the CSS in real time.", completion: '<body>
+d3 = Draft.create!(name: "03 - CSS Variables", completed: "Yes", intro:"Today's exercise will be about CSS variables, move any cursor to update the CSS in real time.", completion: '<body><style>:root {
+  --base: red;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+padding: var(--spacing);
+background: var(--base);
+filter: blur(var(--blur));
+}
+
+input {
+  width:100px;
+}
+</style>
   <p><i>Update CSS Variables with <span class="hl">JS</span></i></p>
 
   <div class="controls">
@@ -499,11 +514,7 @@ d9 = Draft.create!(name: "09 - Dev Tools Domination", completed: "Yes", intro: "
   </script>
 </body>')
 
-d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Yes", intro: "Below is a form that allow you to check multiple boxes holding the shift button.", completion: '<body>
-  <style>
-    html {
-      font-family: sans-serif;
-    }
+d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Yes", intro: "Below is a form that allow you to check multiple boxes holding the shift button.", completion: '<body><style>
     .inbox {
       max-width:400px;
       margin:50px auto;
@@ -537,6 +548,7 @@ d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Ye
       border-left: 1px solid #D1E2FF;
     }
   </style>
+
    <!--
    The following is a common layout you would see in an email client.
    When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
@@ -544,33 +556,33 @@ d10 = Draft.create!(name: "10 - Hold Shift and Check Checkboxes", completed: "Ye
   <div class="inbox">
     <div class="item">
       <input type="checkbox">
-      <p>This is an inbox layout.</p>
+      <p class="paragraph">This is an inbox layout.</p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Check one item</p>
+      <p class="paragraph">Check one item</p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Hold down your Shift key</p>
+      <p class="paragraph">Hold down your Shift key</p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Check a lower item</p>
+      <p class="paragraph">Check a lower item</p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Everything inbetween should also be set to checked</p>
+      <p class="paragraph">Everything inbetween should also be set to checked</p>
     </div>
     <div class="item">
       <input type="checkbox">
-      <p>Watch the console</p>
+      <p class="paragraph">Watch the console</p>
     </div>
-    <div class="item">
+    <div class="item paragraph">
       <input type="checkbox">
-      <p>To see the the JS at work</p>
+      <p">To see the the JS at work</p>
     </div>
-    <div class="item">
+    <div class="item paragraph">
       <input type="checkbox">
       <p>Or go to the next exercise</p>
     </div>
@@ -642,7 +654,7 @@ d12 = Draft.create!(name: "12 - Key Sequence Detection", completed: "Yes", intro
 </html>
 ')
 
-d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "Yes", completion: '<body>
+d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "Yes", intro: "Today, we are adding sliding images that appears while we scroll at their level." completion: '<body>
   <div class="site-wrap">
 
     <h1>Slide in on Scroll</h1>
