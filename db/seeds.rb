@@ -400,7 +400,7 @@ d7 = Draft.create!(name: "07 - Array Cardio Day 2", completed: "Yes", intro: "To
   </script>
 </body>")
 
-d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas", completed: "Yes", intro:"Creation of an HMTL canvas, click to draw a line.", completion: '<body>
+d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas", completed: "Yes", intro:"For today's exercise, we created a canva. Draw something ! ", completion: '<body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
   const canvas = document.querySelector("#draw");
@@ -455,6 +455,9 @@ d8 = Draft.create!(name: "08 - Fun with HTML5 Canvas", completed: "Yes", intro:"
 <style>
   html, body {
     margin:0;
+  }
+  canvas {
+    background-color: white;
   }
 </style>
 </body>')
