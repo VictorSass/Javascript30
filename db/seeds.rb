@@ -744,7 +744,7 @@ d13 = Draft.create!(name: "13 - Slide in on Scroll", completed: "Yes", intro: "T
 
   </script>
 </body>')
-d14 = Draft.create!(name: "14 - JavaScript References VS Copying", completed: "Yes", completion: '<body>
+d14 = Draft.create!(name: "14 - JavaScript References VS Copying", completed: "Yes", intro: "Today is about understanding the subtles differences between referencing and copying in JS, check the Javascript Console 💁 to see the result.", completion: '<body>
   <script>
     // start with strings, numbers and booleans
     let age = 100;
