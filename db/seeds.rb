@@ -832,7 +832,7 @@ d15 = Draft.create!(name: "15 - LocalStorage", completed: "Yes", completion: '<b
     </div>
 
     <div class="wrapper-exo15">
-      <h2>LOCAL TAPAS</h2>
+      <h2 class="text-center">LOCAL TAPAS</h2>
       <p></p>
       <ul class="plates">
         <li>Loading Tapas...</li>
