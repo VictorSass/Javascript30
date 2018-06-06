@@ -935,7 +935,50 @@ console.log(sortedBands);
 
 </body>')
 
-d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "No")
+d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", completion: '<body>
+  <ul class="videos">
+    <li data-time="5:43">
+      Video 1
+    </li>
+    <li data-time="2:33">
+      Video 2
+    </li>
+    <li data-time="3:45">
+      Video 3
+    </li>
+    <li data-time="0:47">
+      Video 4
+    </li>
+    <li data-time="5:21">
+      Video 5
+    </li>
+    <li data-time="6:56">
+      Video 6
+    </li>
+    <li data-time="3:46">
+      Video 7
+    </li>
+  </ul>
+<script>
+  const timeNodes = Array.from(document.querySelectorAll("[data-time]"));
+  const seconds = timeNodes
+    .map(node => node.dataset.time)
+    .map(timeCode => {
+      const [mins, secs] = timeCode.split(":").map(parseFloat);
+      return (mins * 60) + secs;
+      console.log(mins, secs);
+    })
+    .reduce((total, vidSeconds) => total + vidSeconds);
+
+    let secondsLeft = seconds;
+    const hours = Math.floor(secondsLeft / 3600);
+    secondsLeft = secondsLeft % 3600;
+    const mins = Math.floor(secondsLeft / 60);
+    secondsLeft = secondsLeft % 60;
+    console.log(`The total length of the videos are ${hours} hours, ${mins} minutes and ${secondsLeft} seconds`);
+</script>
+</body>')
+
 d19 = Draft.create!(name: "19 - Webcam Fun", completed: "No")
 d20 = Draft.create!(name: "20 - Speech Detection", completed: "No")
 d21 = Draft.create!(name: "21 - Geolocation", completed: "No")
