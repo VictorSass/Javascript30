@@ -918,7 +918,7 @@ d16 = Draft.create!(name: "16 - Mouse Move Shadow", completed: "Yes", intro: "Th
 </script>
 </body>')
 
-d17 = Draft.create!(name: "17 - Sort Without Articles", completed: "Yes", completion: '<body>
+d17 = Draft.create!(name: "17 - Sort Without Articles", completed: "Yes", intro: "Today we use the sort method of JavaScript to sort the bands below irrespective of articles.", completion: '<body>
   <ul id="bands"></ul>
 <script>
 const bands = ["The Plot in You", "The Devil Wears Prada", "Pierce the Veil", "Norma Jean", "The Bled", "Say Anything", "The Midway State", "We Came as Romans", "Counterparts", "Oh, Sleeper", "A Skylit Drive", "Anywhere But Here", "An Old Dog"];
