@@ -888,7 +888,36 @@ d15 = Draft.create!(name: "15 - LocalStorage", completed: "Yes", intro: "Today w
     </script>
   </body>')
 
-d16 = Draft.create!(name: "16 - Mouse Move Shadow", completed: "No")
+d16 = Draft.create!(name: "16 - Mouse Move Shadow", completed: "Yes", completion: '<body>
+  <div class="hero">
+    <h1 class="hero-shadow" contenteditable>🔥WOAH!</h1>
+  </div>
+<script>
+  const hero = document.querySelector(".hero");
+  const text = hero.querySelector("h1");
+  const walk = 150;
+
+  function shadow(e) {
+    const width = hero.offsetWidth;
+    const height = hero.offsetHeight;
+    let { offsetX: x, offsetY: y } = e;
+    if (this !== e.target) {
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    }
+    const xWalk = Math.round((x / width * walk) - (walk / 2));
+    const yWalk = Math.round((y / height * walk) - (walk / 2));
+    text.style.textShadow = `
+      ${xWalk}px ${yWalk}px 0 rgba(255,0,255,0.7),
+      ${xWalk * -1}px ${yWalk}px 0 rgba(0,255,255,0.7),
+      ${yWalk}px ${xWalk * -1}px 0 rgba(0,255,0,0.7),
+      ${yWalk * -1}px ${xWalk}px 0 rgba(0,0,255,0.7)
+    `;
+  }
+  hero.addEventListener("mousemove", shadow);
+</script>
+</body>')
+
 d17 = Draft.create!(name: "17 - Sort Without Articles", completed: "No")
 d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "No")
 d19 = Draft.create!(name: "19 - Webcam Fun", completed: "No")
