@@ -888,7 +888,7 @@ d15 = Draft.create!(name: "15 - LocalStorage", completed: "Yes", intro: "Today w
     </script>
   </body>')
 
-d16 = Draft.create!(name: "16 - Mouse Move Shadow", completed: "Yes", completion: '<body>
+d16 = Draft.create!(name: "16 - Mouse Move Shadow", completed: "Yes", intro: "This exercise is about mouse movement, move the mouse around to see the result !", completion: '<body>
   <div class="hero">
     <h1 class="hero-shadow" contenteditable>🔥WOAH!</h1>
   </div>
