@@ -935,7 +935,7 @@ console.log(sortedBands);
 
 </body>')
 
-d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", intro: "Today we add up the length of each video to find the total length. Each video length can be found in every 'data-time' attributes in the HTML.", completion: '<body>
+d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", intro: "Today we add up the length of each video to find the total length. Each video length can be found in every 'data-time' attributes in the HTML. Open the console to see the result !", completion: '<body>
   <ul class="videos">
     <li data-time="5:43">
       Video 1
