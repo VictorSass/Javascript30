@@ -918,7 +918,23 @@ d16 = Draft.create!(name: "16 - Mouse Move Shadow", completed: "Yes", intro: "Th
 </script>
 </body>')
 
-d17 = Draft.create!(name: "17 - Sort Without Articles", completed: "No")
+d17 = Draft.create!(name: "17 - Sort Without Articles", completed: "Yes", completion: '<body>
+  <ul id="bands"></ul>
+<script>
+const bands = ["The Plot in You", "The Devil Wears Prada", "Pierce the Veil", "Norma Jean", "The Bled", "Say Anything", "The Midway State", "We Came as Romans", "Counterparts", "Oh, Sleeper", "A Skylit Drive", "Anywhere But Here", "An Old Dog"];
+
+function strip(bandName) {
+  return bandName.replace(/^(a |the |an )/i, "").trim();
+}
+
+const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+document.querySelector("#bands").innerHTML = sortedBands.map(band => `<li>${band}</li>`).join("");
+
+console.log(sortedBands);
+</script>
+
+</body>')
+
 d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "No")
 d19 = Draft.create!(name: "19 - Webcam Fun", completed: "No")
 d20 = Draft.create!(name: "20 - Speech Detection", completed: "No")
