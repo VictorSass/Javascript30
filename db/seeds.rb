@@ -1021,7 +1021,6 @@ d20 = Draft.create!(name: "20 - Speech Detection", completed: "Yes", intro: "Tod
   recognition.addEventListener("end", recognition.start);
   recognition.start();
 </script>
-
 </body>')
 
 d21 = Draft.create!(name: "21 - Geolocation", completed: "No")
