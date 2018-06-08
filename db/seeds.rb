@@ -983,7 +983,7 @@ d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", 
 
 d19 = Draft.create!(name: "19 - Webcam Fun", completed: "No")
 
-d20 = Draft.create!(name: "20 - Speech Detection", completed: "Yes", completion: '<body>
+d20 = Draft.create!(name: "20 - Speech Detection", completed: "Yes", intro: "Today is about in-browser speech recognition, try to talk on your microphone to see what happen. !¡ WORKS ONLY WITH FIREFOX/CHROME LAST VERSIONS !¡", completion: '<body>
   <style>
     p {
       margin: 0 0 3rem;
