@@ -982,16 +982,66 @@ d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", 
 </body>')
 
 d19 = Draft.create!(name: "19 - Webcam Fun", completed: "No")
-d20 = Draft.create!(name: "20 - Speech Detection", completed: "No")
+
+d20 = Draft.create!(name: "20 - Speech Detection", completed: "Yes", completion: '<body>
+  <style>
+    p {
+      margin: 0 0 3rem;
+    }
+  </style>
+
+  <div class="words" contenteditable>
+  </div>
+
+<script>
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
+
+  let p = document.createElement("p");
+  const words = document.querySelector(".words");
+  words.appendChild(p);
+
+  recognition.addEventListener("result", e => {
+    console.log(e.results);
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join("");
+
+      p.textContent = transcript;
+      if (e.results[0].isFinal) {
+        p = document.createElement("p");
+        words.appendChild(p);
+      }
+
+    console.log(transcript);
+  });
+  recognition.addEventListener("end", recognition.start);
+  recognition.start();
+</script>
+
+</body>')
+
 d21 = Draft.create!(name: "21 - Geolocation", completed: "No")
+
 d22 = Draft.create!(name: "22 - Follow Along Link Highlighter", completed: "No")
+
 d23 = Draft.create!(name: "23 - Speech Synthesis", completed: "No")
+
 d24 = Draft.create!(name: "24 - Sticky Nav", completed: "No")
+
 d25 = Draft.create!(name: "25 - Event Capture, Propagation, Bubbling and Once", completed: "No")
+
 d26 = Draft.create!(name: "26 - Stripe Follow Along Nav", completed: "No")
+
 d27 = Draft.create!(name: "27 - Click and Drag", completed: "No")
+
 d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No")
+
 d29 = Draft.create!(name: "29 - Countdown Timer", completed: "No")
+
 d30 = Draft.create!(name: "30 - Whack A Mole", completed: "No")
 
 puts "End seed"
