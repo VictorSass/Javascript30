@@ -959,6 +959,7 @@ d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", 
       Video 7
     </li>
   </ul>
+
 <script>
   const timeNodes = Array.from(document.querySelectorAll("[data-time]"));
   const seconds = timeNodes
@@ -977,6 +978,7 @@ d18 = Draft.create!(name: "18 - Adding Up Times with Reduce", completed: "Yes", 
     secondsLeft = secondsLeft % 60;
     console.log(`The total length of the videos are ${hours} hours, ${mins} minutes and ${secondsLeft} seconds`);
 </script>
+
 </body>')
 
 d19 = Draft.create!(name: "19 - Webcam Fun", completed: "No")
