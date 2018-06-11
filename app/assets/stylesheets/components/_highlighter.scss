@@ -1,4 +1,16 @@
+nav ul li {
+  color: #646464;
+  list-style-type: none;
+  z-index: 1;
+}
+
 .black-link {
+  text-decoration: none;
+  color:black;
+  border-radius: 20px;
+}
+
+.black-link:hover {
   text-decoration: none;
   color:black;
   border-radius: 20px;
@@ -6,10 +18,11 @@
 
 .wrapper-highlighter {
   margin:0 auto;
-  max-width:500px;
+  max-width:700px;
   font-size: 20px;
   line-height: 2;
   position: relative;
+  z-index: 1;
 }
 
 .highlighter {
@@ -19,7 +32,6 @@
   top:0;
   background:white;
   left:0;
-  z-index: -1;
   border-radius:20px;
   display: block;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -30,7 +42,7 @@
   display: flex;
   list-style: none;
   justify-content: center;
-  margin:100px 0;
+  margin: 20px 0 40px 0;
 }
 
 .menu-highlight a {

@@ -1069,22 +1069,22 @@ d21 = Draft.create!(name: "21 - Geolocation", completed: "Yes", intro: "This too
 </body>')
 
 d22 = Draft.create!(name: "22 - Follow Along Link Highlighter", completed: "Yes", intro: "In this one, when you move your cursion on black-link words it will trigger an highlight around them that adjust to their dimensions.",  completion: '<body>
-    <nav>
+    <nav style="clear:both">
       <ul class="menu-highlight">
-        <li><a class="black-link href="">Home</a></li>
-        <li><a class="black-link href="">Order Status</a></li>
-        <li><a class="black-link href="">Tweets</a></li>
-        <li><a class="black-link href="">Read Our History</a></li>
-        <li><a class="black-link href="">Contact Us</a></li>
+        <li><a class="black-link" href="">Home</a></li>
+        <li><a class="black-link" href="">Order Status</a></li>
+        <li><a class="black-link" href="">Tweets</a></li>
+        <li><a class="black-link" href="">Read Our History</a></li>
+        <li><a class="black-link" href="">Contact Us</a></li>
       </ul>
     </nav>
 
-    <div class="wrapper-highlighter">
-      <p>Lorem ipsum dolor sit amet, <a class="black-link href="">consectetur</a> adipisicing elit. Est <a class="black-link" href="">explicabo</a> unde natus necessitatibus esse obcaecati distinctio, aut itaque, qui vitae!</p>
-      <p>Aspernatur sapiente quae sint <a class="black-link href="">soluta</a> modi, atque praesentium laborum pariatur earum <a class="black-link href="">quaerat</a> cupiditate consequuntur facilis ullam dignissimos, aperiam quam veniam.</p>
-      <p>Cum ipsam quod, incidunt sit ex <a class="black-link href="">tempore</a> placeat maxime <a class="black-link href="">corrupti</a> possimus <a class="black-link href="">veritatis</a> ipsum fugit recusandae est doloremque? Hic, <a class="black-link href="">quibusdam</a>, nulla.</p>
-      <p>Esse quibusdam, ad, ducimus cupiditate <a class="black-link href="">nulla</a>, quae magni odit <a class="black-link href="">totam</a> ut consequatur eveniet sunt quam provident sapiente dicta neque quod.</p>
-      <p>Aliquam <a class="black-link href="">dicta</a> sequi culpa fugiat <a class="black-link href="">consequuntur</a> pariatur optio ad minima, maxime <a class="black-link href="">odio</a>, distinctio magni impedit tempore enim repellendus <a class="black-link href="">repudiandae</a> quas!</p>
+    <div class="wrapper-highlighter text-justify">
+      <p>Lorem ipsum dolor sit amet, <a class="black-link" href="">consectetur</a> adipisicing elit. Est <a class="black-link" href="">explicabo</a> unde natus necessitatibus esse obcaecati distinctio, aut itaque, qui vitae!</p>
+      <p>Aspernatur sapiente quae sint <a class="black-link" href="">soluta</a> modi, atque praesentium laborum pariatur earum <a class="black-link" href="">quaerat</a> cupiditate consequuntur facilis ullam dignissimos, aperiam quam veniam.</p>
+      <p>Cum ipsam quod, incidunt sit ex <a class="black-link" href="">tempore</a> placeat maxime <a class="black-link" href="">corrupti</a> possimus <a class="black-link" href="">veritatis</a> ipsum fugit recusandae est doloremque? Hic, <a class="black-link" href="">quibusdam</a>, nulla.</p>
+      <p>Esse quibusdam, ad, ducimus cupiditate <a class="black-link" href="">nulla</a>, quae magni odit <a class="black-link" href="">totam</a> ut consequatur eveniet sunt quam provident sapiente dicta neque quod.</p>
+      <p>Aliquam <a class="black-link" href="">dicta</a> sequi culpa fugiat <a class="black-link" href="">consequuntur</a> pariatur optio ad minima, maxime <a class="black-link" href="">odio</a>, distinctio magni impedit tempore enim repellendus <a class="black-link" "href="">repudiandae</a> quas!</p>
     </div>
 
   <script>
