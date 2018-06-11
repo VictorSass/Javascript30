@@ -1,0 +1,41 @@
+.black-link {
+  text-decoration: none;
+  color:black;
+  border-radius: 20px;
+}
+
+.wrapper-highlighter {
+  margin:0 auto;
+  max-width:500px;
+  font-size: 20px;
+  line-height: 2;
+  position: relative;
+}
+
+.highlighter {
+  transition: all 0.3s;
+  border-bottom:2px solid white;
+  position: absolute;
+  top:0;
+  background:white;
+  left:0;
+  z-index: -1;
+  border-radius:20px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu-highlight {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin:100px 0;
+}
+
+.menu-highlight a {
+  display: inline-block;
+  padding:5px;
+  margin:0 20px;
+  color:black;
+}
