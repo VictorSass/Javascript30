@@ -1068,7 +1068,7 @@ d21 = Draft.create!(name: "21 - Geolocation", completed: "Yes", intro: "This too
   </script>
 </body>')
 
-d22 = Draft.create!(name: "22 - Follow Along Link Highlighter", completed: "Yes", completion: '<body>
+d22 = Draft.create!(name: "22 - Follow Along Link Highlighter", completed: "Yes", intro: "In this one, when you move your cursion on black-link words it will trigger an highlight around them that adjust to their dimensions.",  completion: '<body>
     <nav>
       <ul class="menu-highlight">
         <li><a class="black-link href="">Home</a></li>
