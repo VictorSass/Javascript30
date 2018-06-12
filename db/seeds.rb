@@ -1113,7 +1113,77 @@ d22 = Draft.create!(name: "22 - Follow Along Link Highlighter", completed: "Yes"
   </script>
 </body>')
 
-d23 = Draft.create!(name: "23 - Speech Synthesis", completed: "No")
+d23 = Draft.create!(name: "23 - Speech Synthesis", completed: "Yes", completion: '<body><style>
+  textarea {
+  height: 20rem;
+}
+
+input[type="select"] {
+}
+</style>
+
+    <div class="voiceinator">
+
+      <h1 class="voiceinator-title">The Voiceinator 5000</h1>
+
+      <select name="voice" id="voices">
+        <option value="">Select A Voice</option>
+      </select>
+
+      <label for="rate">Rate:</label>
+      <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+      <label for="pitch">Pitch:</label>
+
+      <input name="pitch" type="range" min="0" max="2" step="0.1">
+      <textarea name="text">Hello! I love JavaScript 👍</textarea>
+      <button id="stop">Stop!</button>
+      <button id="speak">Speak</button>
+
+    </div>
+
+<script>
+  const msg = new SpeechSynthesisUtterance();
+  let voices = [];
+  const voicesDropdown = document.querySelector("[name=\"voice\"]");
+  const options = document.querySelectorAll("[type=\"range\"], [name=\"text\"]");
+  const speakButton = document.querySelector("#speak");
+  const stopButton = document.querySelector("#stop");
+
+  msg.text = document.querySelector("[name=\"text\"]").value;
+
+  function populateVoices() {
+    voices = this.getVoices();
+    voicesDropdown.innerHTML = voices
+      .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
+      .join("");
+  }
+
+  function setVoice() {
+    msg.voice = voices.find(voice => voice.name === this.value);
+  }
+
+  function toggleVoiceinator(startOver = true) {
+    speechSynthesis.cancel();
+    if(startOver) {
+      speechSynthesis.speak(msg);
+    }
+  }
+
+  function setOption() {
+    console.log(this.name, this.value);
+    msg[this.name] = this.value;
+    toggleVoiceinator();
+  }
+
+  speechSynthesis.addEventListener("voiceschanged", populateVoices);
+  voicesDropdown.addEventListener("change", setVoice);
+  options.forEach(option => option.addEventListener("change", setOption));
+  speakButton.addEventListener("click", toggleVoiceinator);
+  stopButton.addEventListener("click", () => toggleVoiceinator(false));
+</script>
+
+</body>')
 
 d24 = Draft.create!(name: "24 - Sticky Nav", completed: "No")
 
