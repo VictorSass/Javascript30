@@ -1113,7 +1113,7 @@ d22 = Draft.create!(name: "22 - Follow Along Link Highlighter", completed: "Yes"
   </script>
 </body>')
 
-d23 = Draft.create!(name: "23 - Speech Synthesis", completed: "Yes", completion: '<body><style>
+d23 = Draft.create!(name: "23 - Speech Synthesis", completed: "Yes", intro: "This tool use the speech synthesis API that come in most browser. Enter a sentence, press \"Speak\" and listen !", completion: '<body><style>
   textarea {
   height: 20rem;
 }
