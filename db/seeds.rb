@@ -1185,7 +1185,7 @@ input[type="select"] {
 
 </body>')
 
-d24 = Draft.create!(name: "24 - Sticky Nav", completed: "Yes", completion: '<body>
+d24 = Draft.create!(name: "24 - Sticky Nav", completed: "Yes", intro: "Here we showcase how to fix a navbar when you scroll down. When you hit the top of hit it will trigger some actions, test it !", completion: '<body>
   <header class="header-sticky">
     <h1 class="title-sticky">A story about getting lost.</h1>
   </header>
