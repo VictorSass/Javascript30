@@ -1236,7 +1236,36 @@ d24 = Draft.create!(name: "24 - Sticky Nav", completed: "Yes", intro: "Here we s
 </script>
 </body>')
 
-d25 = Draft.create!(name: "25 - Event Capture, Propagation, Bubbling and Once", completed: "No")
+d25 = Draft.create!(name: "25 - Event Capture, Propagation, Bubbling and Once", completed: "Yes", completion: '<body class="bod">
+
+  <div class="one box-dimensions">
+    <div class="two box-dimensions">
+      <div class="three box-dimensions">
+      </div>
+    </div>
+  </div>
+<button class="box-dimensions">Click it many times, watch the result in the console !</button>
+<script>
+const divs = document.querySelectorAll("div");
+const button = document.querySelector("button");
+
+function logText(e) {
+  console.log(this.classList.value);
+  // e.stopPropagation(); // Stop taking all parents
+}
+
+divs.forEach(div => div.addEventListener("click", logText, {
+  capture: false,
+  once: true //run event only one time no matter how many click you do
+}));
+
+button.addEventListener("click", () => {
+  console.log("Only one click recorded.");
+}, {
+  once: true
+})
+</script>
+</body>')
 
 d26 = Draft.create!(name: "26 - Stripe Follow Along Nav", completed: "No")
 
