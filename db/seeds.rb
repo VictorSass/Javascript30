@@ -1236,7 +1236,7 @@ d24 = Draft.create!(name: "24 - Sticky Nav", completed: "Yes", intro: "Here we s
 </script>
 </body>')
 
-d25 = Draft.create!(name: "25 - Event Capture, Propagation, Bubbling and Once", completed: "Yes", completion: '<body class="bod">
+d25 = Draft.create!(name: "25 - Event Capture, Propagation, Bubbling and Once", completed: "Yes", intro: "This one is to undestand the conditions of JavaScript method 'addEventListener'. Open the sourcecode and the console to see what happen when you click on an element. ", completion: '<body class="bod">
 
   <div class="one box-dimensions">
     <div class="two box-dimensions">
