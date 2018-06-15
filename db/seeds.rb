@@ -1268,7 +1268,7 @@ button.addEventListener("click", () => {
 </body>')
 
 d26 = Draft.create!(name: "26 - Stripe Follow Along Nav", completed: "Yes", intro: "Hover on the tabs to see a smooth transition bewteen dropdowns.",  completion: '<body>
-  <h2 class="dropdown-title">Cool</h2>
+  <h2 class="dropdown-title hide">Cool</h2>
   <nav class="dropdown-nav top">
     <div class="dropdownBackground">
       <span class="arrow"></span>
