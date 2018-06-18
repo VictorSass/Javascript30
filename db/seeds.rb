@@ -1372,7 +1372,68 @@ d26 = Draft.create!(name: "26 - Stripe Follow Along Nav", completed: "Yes", intr
 </script>
 </body>')
 
-d27 = Draft.create!(name: "27 - Click and Drag", completed: "No")
+d27 = Draft.create!(name: "27 - Click and Drag", completed: "Yes", completion: '<body>
+  <div class="items-drag">
+    <div class="item-drag item1">01</div>
+    <div class="item-drag item2">02</div>
+    <div class="item-drag" item3">03</div>
+    <div class="item-drag item4">04</div>
+    <div class="item-drag item5">05</div>
+    <div class="item-drag item6">06</div>
+    <div class="item-drag item7">07</div>
+    <div class="item-drag item8">08</div>
+    <div class="item-drag item9">09</div>
+    <div class="item-drag item10">10</div>
+    <div class="item-drag item11">11</div>
+    <div class="item-drag item12">12</div>
+    <div class="item-drag item13">13</div>
+    <div class="item-drag item14">14</div>
+    <div class="item-drag item15">15</div>
+    <div class="item-drag item16">16</div>
+    <div class="item-drag item17">17</div>
+    <div class="item-drag item18">18</div>
+    <div class="item-drag item19">19</div>
+    <div class="item-drag item20">20</div>
+    <div class="item-drag item21">21</div>
+    <div class="item-drag item22">22</div>
+    <div class="item-drag item23">23</div>
+    <div class="item-drag item24">24</div>
+    <div class="item-drag item25">25</div>
+  </div>
+
+<script>
+  const slider = document.querySelector(".items-drag")
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    console.log(startX);
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+</script>
+</body>')
 
 d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No")
 
