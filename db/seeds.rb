@@ -1372,7 +1372,7 @@ d26 = Draft.create!(name: "26 - Stripe Follow Along Nav", completed: "Yes", intr
 </script>
 </body>')
 
-d27 = Draft.create!(name: "27 - Click and Drag", completed: "Yes", completion: '<body>
+d27 = Draft.create!(name: "27 - Click and Drag", completed: "Yes", intro: "Drag to side-scroll the carousel below.",  completion: '<body>
   <div class="items-drag">
     <div class="item-drag item1">01</div>
     <div class="item-drag item2">02</div>
