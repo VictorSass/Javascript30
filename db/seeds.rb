@@ -1435,7 +1435,7 @@ d27 = Draft.create!(name: "27 - Click and Drag", completed: "Yes", intro: "Drag 
 </script>
 </body>')
 
-d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No", completion: '<body>
+d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No", intro: "The speed bar allow you to change the spped of the video on the fly.", completion: '<body>
   <div class="wrapper-video">
     <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
     <div class="speed">
