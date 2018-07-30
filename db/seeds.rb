@@ -1435,7 +1435,7 @@ d27 = Draft.create!(name: "27 - Click and Drag", completed: "Yes", intro: "Drag 
 </script>
 </body>')
 
-d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No", intro: "The speed bar allow you to change the spped of the video on the fly.", completion: '<body>
+d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "Yes", intro: "The speed bar allow you to change the spped of the video on the fly.", completion: '<body>
   <div class="wrapper-video">
     <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
     <div class="speed">
@@ -1463,6 +1463,81 @@ d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "No", intro:
 
 d29 = Draft.create!(name: "29 - Countdown Timer", completed: "No")
 
-d30 = Draft.create!(name: "30 - Whack A Mole", completed: "No")
+d30 = Draft.create!(name: "30 - Whack A Mole", completed: "Yes", completion: '<body>
+  <div class="mole-title text-center">
+    <h1>Whack-a-mole!</h1>
+    <span class="score">0</span>
+    <button class="mole-button" onClick="startGame()">Start !</button>
+  </div>
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+<script>
+  const holes = document.querySelectorAll(".hole");
+  const scoreBoard = document.querySelector(".score");
+  const moles = document.querySelectorAll(".mole");
+  let lastHole;
+  let timeUp = false;
+  let score = 0;
+
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+
+  function randomHole(holes) {
+    const idx = Math.floor(Math.random() * holes.length);
+    const hole = holes[idx];
+    if (hole === lastHole) {
+      return randomHole(holes);
+    }
+    lastHole = hole;
+    return hole;
+  }
+
+  function peep() {
+    const time = randomTime(200, 1000);
+    const  hole = randomHole(holes);
+    hole.classList.add("up");
+    setTimeout(() => {
+      hole.classList.remove("up");
+      if(!timeUp) peep();
+    }, time);
+  }
+
+  function startGame() {
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    score = 0;
+    peep();
+    setTimeout(() => timeUp = true, 10000)
+  }
+
+  function bonk(e) {
+    if(!e.isTrusted) return // cheater
+      score++;
+    this.classList.remove("up");
+    scoreBoard.textContent = score;
+  }
+
+  moles.forEach(mole => mole.addEventListener("click", bonk));
+</script>
+</body>')
 
 puts "End seed"
