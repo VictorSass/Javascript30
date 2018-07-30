@@ -1463,7 +1463,7 @@ d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "Yes", intro
 
 d29 = Draft.create!(name: "29 - Countdown Timer", completed: "No")
 
-d30 = Draft.create!(name: "30 - Whack A Mole", completed: "Yes", completion: '<body>
+d30 = Draft.create!(name: "30 - Whack A Mole", completed: "Yes", intro: "For the last one, we whack some moles ! Let's play !", completion: '<body>
   <div class="mole-title text-center">
     <h1>Whack-a-mole!</h1>
     <span class="score">0</span>
