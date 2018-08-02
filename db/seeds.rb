@@ -1461,7 +1461,77 @@ d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "Yes", intro
 </script>
 </body>')
 
-d29 = Draft.create!(name: "29 - Countdown Timer", completed: "No")
+d29 = Draft.create!(name: "29 - Countdown Timer", completed: "Yes", completion: '<body>
+  <div class="timer-countdown">
+    <div class="timer__controls">
+      <button data-time="20" class="timer__button">20 Secs</button>
+      <button data-time="300" class="timer__button">Work 5</button>
+      <button data-time="900" class="timer__button">Quick 15</button>
+      <button data-time="1200" class="timer__button">Snack 20</button>
+      <button data-time="3600" class="timer__button">Lunch Break</button>
+      <form name="customForm" id="custom">
+        <input type="text" name="minutes" placeholder="Enter Minutes">
+      </form>
+    </div>
+    <div class="display-countdown">
+      <h1 class="display__time-left"></h1>
+      <p class="display__end-time"></p>
+    </div>
+  </div>
+
+  <script>
+    let countdown;
+    const timerDisplay = document.querySelector(".display__time-left");
+    const endTime = document.querySelector(".display__end-time");
+    const buttons = document.querySelectorAll("[data-time]");
+
+    function timer(seconds) {
+      clearInterval(countdown);
+      const now = Date.now();
+      const then = now + seconds * 1000;
+      displayTimeLeft(seconds);
+      displayEndTime(then);
+
+      countdown = setInterval(() => {
+        const secondsLeft = Math.round((then - Date.now()) / 1000);
+        if(secondsLeft < 0) {
+          clearInterval(countdown);
+          return;
+        }
+        displayTimeLeft(secondsLeft);
+      }, 1000);
+    }
+
+    function displayTimeLeft(seconds) {
+      const minutes = Math.floor(seconds  / 60);
+      const remainderSeconds = seconds % 60;
+      const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+      document.title = display;
+      timerDisplay.textContent = display;
+    }
+
+
+    function displayEndTime(timestamp) {
+      const end = new Date(timestamp);
+      const hours = end.getHours();
+      const minutes = end.getMinutes();
+      endTime.textContent = `Be back at ${hours}:${minutes}`;
+    }
+
+    function startTimer() {
+      const seconds = parseInt(this.dataset.time);
+      timer(seconds);
+    }
+
+    buttons.forEach(button => button.addEventListener("click", startTimer));
+    document.customForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const mins = this.minutes.value;
+      timer(mins * 60);
+      this.reset();
+    });
+  </script>
+</body>')
 
 d30 = Draft.create!(name: "30 - Whack A Mole", completed: "Yes", intro: "For the last one, we whack some moles ! Test your dexterity !", completion: '<body>
   <div class="mole-title text-center">
