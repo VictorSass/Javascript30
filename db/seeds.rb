@@ -1461,7 +1461,7 @@ d28 = Draft.create!(name: "28 - Video Speed Controller", completed: "Yes", intro
 </script>
 </body>')
 
-d29 = Draft.create!(name: "29 - Countdown Timer", completed: "Yes", completion: '<body>
+d29 = Draft.create!(name: "29 - Countdown Timer", completed: "Yes", intro: "Press a predetermined button to run the countdown clock or enter your personalized timer.", completion: '<body>
   <div class="timer-countdown">
     <div class="timer__controls">
       <button data-time="20" class="timer__button">20 Secs</button>
