@@ -1505,7 +1505,7 @@ d29 = Draft.create!(name: "29 - Countdown Timer", completed: "Yes", intro: "Pres
     function displayTimeLeft(seconds) {
       const minutes = Math.floor(seconds  / 60);
       const remainderSeconds = seconds % 60;
-      const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+      const display = `${minutes}:${remainderSeconds < 10 ? "0": ""}${remainderSeconds}`;
       document.title = display;
       timerDisplay.textContent = display;
     }
